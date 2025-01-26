@@ -5,12 +5,15 @@ import ActionButton from "./ActionButton";
 import "./App.css";
 
 function App() {
+  // Initialize state for player health, enemy health, and game status
   const [playerHealth, setPlayerHealth] = useState(100);
   const [enemyHealth, setEnemyHealth] = useState(100);
   const [status, setStatus] = useState("");
 
+  // Function to generate random damage value
   const randomDmg = () => Math.floor(Math.random() * 50) + 1;
 
+  // Function to update health values
   const updateHealth = () => {
     setPlayerHealth((prevPlayerHealth) =>
       Math.max(prevPlayerHealth - randomDmg(), 0)
@@ -20,6 +23,7 @@ function App() {
     );
   };
 
+  // useEffect hook to update game status based on health values
   useEffect(() => {
     const updateStatus = () => {
       if (playerHealth === 0 && enemyHealth === 0) {
@@ -34,6 +38,7 @@ function App() {
     updateStatus();
   }, [playerHealth, enemyHealth]);
 
+  // Function to reset the game to its initial state
   const resetGame = () => {
     setPlayerHealth(100);
     setEnemyHealth(100);
