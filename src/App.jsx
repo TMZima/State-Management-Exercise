@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import HealthDisplay from "./HealthDisplay";
 import GameStatus from "./GameStatus";
 import ActionButton from "./ActionButton";
-import BattleLog from "./BattleLog";
 import "./App.css";
 
 function App() {
@@ -35,13 +34,22 @@ function App() {
     updateStatus();
   }, [playerHealth, enemyHealth]);
 
+  const resetGame = () => {
+    setPlayerHealth(100);
+    setEnemyHealth(100);
+    setStatus("");
+  };
+
   return (
     <div>
       <h1>Space Battle Simulator</h1>
       <HealthDisplay playerHealth={playerHealth} enemyHealth={enemyHealth} />
       <GameStatus status={status} />
-      <ActionButton updateHealth={updateHealth} />
-      <BattleLog />
+      <ActionButton
+        updateHealth={updateHealth}
+        resetGame={resetGame}
+        status={status}
+      />
     </div>
   );
 }
