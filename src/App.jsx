@@ -1,10 +1,16 @@
 import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
+import HealthDisplay from "./HealthDisplay";
+import GameStatus from "./GameStatus";
+import ActionButton from "./ActionButton";
+import BattleLog from "./BattleLog";
 import "./App.css";
 
 function App() {
-  return;
+  return (
+    <div>
+      <HealthDisplay />
+    </div>
+  );
 }
 
 export default App;
