@@ -1,6 +1,6 @@
 import React from "react";
 
-const ActionButton = ({ status }) => {
+const ActionButton = ({ status, updateHealth }) => {
   let message;
   if (status === "win") {
     message = "Restart?";
@@ -12,7 +12,7 @@ const ActionButton = ({ status }) => {
     message = "Fire!";
   }
 
-  return <button>{message}</button>;
+  return <button onClick={updateHealth}>{message}</button>;
 };
 
 export default ActionButton;

@@ -1,6 +1,6 @@
 import React from "react";
 
-const HealthDisplay = ({ playerHealth = 100, enemyHealth = 100 }) => {
+const HealthDisplay = ({ playerHealth, enemyHealth }) => {
   return (
     <div>
       <h2>Player Health: {playerHealth}</h2>
