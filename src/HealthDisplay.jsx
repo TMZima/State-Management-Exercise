@@ -1,3 +1,5 @@
+import React from "react";
+
 const HealthDisplay = ({ playerHealth = 100, enemyHealth = 100 }) => {
   return (
     <div>
