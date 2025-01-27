@@ -1,0 +1,15 @@
+.HealthDisplay {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 150px 0;
+  padding: 0 2em;
+}
+
+.HealthDisplay-player {
+  color: rgb(0, 228, 30);
+}
+
+.HealthDisplay-enemy {
+  color: red;
+}

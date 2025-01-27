@@ -1,0 +1,10 @@
+body {
+  font-family: monospace;
+  background-color: black;
+  color: white;
+}
+
+.App-title {
+  margin: 3em;
+  text-align: center;
+}

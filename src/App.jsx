@@ -46,15 +46,15 @@ function App() {
   };
 
   return (
-    <div>
-      <h1>Space Battle Simulator</h1>
+    <div className="App">
+      <h1 className="App-title">Space Battle Simulator</h1>
       <HealthDisplay playerHealth={playerHealth} enemyHealth={enemyHealth} />
-      <GameStatus status={status} />
       <ActionButton
         updateHealth={updateHealth}
         resetGame={resetGame}
         status={status}
       />
+      <GameStatus status={status} />
     </div>
   );
 }

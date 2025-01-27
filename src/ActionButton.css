@@ -1,0 +1,20 @@
+.ActionButton-container {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  margin: 5em 0;
+}
+
+.ActionButton-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  border: 10px solid red;
+  border-radius: 50%;
+  height: 150px;
+  width: 150px;
+  background-color: orange;
+  color: white;
+  margin: 0 1em;
+}

@@ -1,4 +1,5 @@
 import React from "react";
+import "./ActionButton.css";
 
 const ActionButton = ({ status, updateHealth, resetGame }) => {
   let message = "";
@@ -11,16 +12,19 @@ const ActionButton = ({ status, updateHealth, resetGame }) => {
   }
 
   return (
-    <button
-      // Set onClick handler based on game status
-      onClick={
-        status === "win" || status === "lose" || status === "draw"
-          ? resetGame
-          : updateHealth
-      }
-    >
-      {message}
-    </button>
+    <div className="ActionButton-container">
+      <button
+        className="ActionButton-btn"
+        // Set onClick handler based on game status
+        onClick={
+          status === "win" || status === "lose" || status === "draw"
+            ? resetGame
+            : updateHealth
+        }
+      >
+        {message}
+      </button>
+    </div>
   );
 };
 

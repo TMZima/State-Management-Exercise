@@ -1,4 +1,5 @@
 import React from "react";
+import "./GameStatus.css";
 
 const GameStatus = ({ status }) => {
   let message;
@@ -11,7 +12,7 @@ const GameStatus = ({ status }) => {
   } else {
     message = `Engage the enemy! ☄️`;
   }
-  return <h2>{message}</h2>;
+  return <h2 className="GameStatus">{message}</h2>;
 };
 
 export default GameStatus;
