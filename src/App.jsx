@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
-import HealthDisplay from "./HealthDisplay";
-import GameStatus from "./GameStatus";
-import ActionButton from "./ActionButton";
+import HealthDisplay from "./components/HealthDisplay";
+import GameStatus from "./components/GameStatus";
+import ActionButton from "./components/ActionButton";
 import "./App.css";
 
 function App() {
